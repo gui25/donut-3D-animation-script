@@ -16,7 +16,6 @@ Script :
 
 ```
 (function() {
-  // Create and style the canvas element
   const canvas = document.createElement('canvas');
   canvas.id = 'canvasDonut';
   canvas.width = window.innerWidth;
@@ -28,16 +27,13 @@ Script :
 
   document.body.innerHTML = '';
 
-  // Append the canvas element to the body
   document.body.appendChild(canvas);
 
-  // Update canvas size on window resize
   window.addEventListener('resize', function() {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
   });
 
-  // Animation variables
   let angleA = 1;
   let angleB = 1;
   const outerRadius = 1;
@@ -46,7 +42,6 @@ Script :
   const distanceFactor2 = 5;
   let animationInterval;
 
-  // Render a single frame of the animation
   function renderFrame() {
     const ctx = canvas.getContext('2d');
     ctx.fillStyle = '#000';
@@ -84,7 +79,6 @@ Script :
     }
   }
 
-  // Toggle the animation on and off
   function toggleAnimation() {
     if (animationInterval === undefined) {
       animationInterval = setInterval(renderFrame, 50);
@@ -94,7 +88,6 @@ Script :
     }
   }
 
-  // Start the animation on the canvas
   toggleAnimation();
 })();
 ```
