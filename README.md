@@ -1,4 +1,4 @@
-# donut-3D-animation-script
+# Donut 3D animation script
 Features:
 
 Responsive design: Automatically adapts to the user's screen size.
